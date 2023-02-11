@@ -21,6 +21,7 @@
     in your IDE for a better DX
   </p>
   <p class="read-the-docs">Click on the Vite and Vue logos to learn more</p>
+  <p class="read-the-docs">Click on the Vite and Vue logos to learn more</p>
 </template>
 <script setup>
 import { ref } from 'vue'
