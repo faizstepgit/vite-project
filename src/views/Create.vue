@@ -1,7 +1,5 @@
 <template>
-  <adminlte>
-
-  </adminlte>
+<adminlte></adminlte>
   <h1>This is create Page</h1>
 </template>
 

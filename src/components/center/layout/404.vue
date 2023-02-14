@@ -1,6 +1,6 @@
 <template>
-<adminlte></adminlte>
-  <h1>This is Delete page</h1>
+  <h1>404</h1>
+  <h3>Page Not Found</h3>
 </template>
 
 <script>

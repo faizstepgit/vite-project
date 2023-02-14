@@ -1,6 +1,13 @@
 <template>
+  
   <div>
-    <router-view></router-view>
+    <!-- <router-link to="/Home">Home</router-link>
+    <router-link to="/Create">Create</router-link>
+    <router-link to="/Delete">Delete</router-link>
+    <router-link to="/Update">Update</router-link> -->
+    
+    <router-view>
+    </router-view>
   </div>
 
 </template>

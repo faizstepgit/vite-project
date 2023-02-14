@@ -1,8 +1,6 @@
 <template>
-  <adminlte>
-
-    <h1>This is Update page</h1>
-  </adminlte>
+  <adminlte></adminlte>
+<h1>jjjjjjjjjj</h1>
 </template>
 
 <script>

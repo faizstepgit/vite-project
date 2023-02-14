@@ -5,6 +5,7 @@ import Login from '../views/Authentication/Login.vue';
 import Update from '../views/Update.vue';
 import Delete from '../views/Delete.vue';
 import Create from '../views/Create.vue';
+import error from '../components/center/layout/404.vue';
 
 const routes = [
   {
@@ -31,12 +32,17 @@ const routes = [
     path : '/Create',
     name : 'Create',
     component : Create,
+  },
+  {
+    path : '/:catchAll(.*)',
+    name : 'error',
+    component : error,
   }
 ];
 
 const router = createRouter({
   history : createWebHistory(),
-  routes : routes
+  routes
   // routes : 
 });
 
