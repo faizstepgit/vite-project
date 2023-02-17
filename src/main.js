@@ -5,6 +5,7 @@ import adminlte from './components/center/layout/adminlte.vue';
 import router from './router';
 
 const app = createApp(App);
+
 app.use(router);
 app.component('adminlte', adminlte);
 app.mount('#app');
