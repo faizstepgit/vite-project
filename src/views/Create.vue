@@ -23,10 +23,10 @@
 
 <div>
   <ul>
-    <li v-for="books in filter" :class="{ fav: books.isfav}" @click="favtoggle(books)">
+    <!-- <li v-for="books in filter" :class="{ fav: books.isfav}" @click="favtoggle(books)">
       <img :src="books.img" :alt="books.title">
       <h3>{{books.title}} - {{ books.author }}</h3>
-    </li>
+    </li> -->
   </ul>
 </div>
 <a href="https://www.facebook.com/Faizstep/" target="_blank">ssss</a>
