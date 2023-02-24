@@ -31,9 +31,12 @@
 </div>
 <a href="https://www.facebook.com/Faizstep/" target="_blank">ssss</a>
 <a v-bind:href="url" target="_blank">aaaa</a>
-
 <input type="text" ref="name">
 <button @click="clicklist">click me</button>
+<button @click="testDPI()">DDDDD</button>
+  <div v-for="(item,index) in info.status">
+    <h1>{{ index }} - {{  item }}</h1>
+  </div>
 </template>
 
 <script>
@@ -46,6 +49,7 @@ export default {
       x :0,
       y :0,
       showbook : true,
+      info : {},
       book : [
         { title :'name of myword',author:'faizstep dev',img : '/src/assets/1.png',isfav : true},
         { title :'name of myword1',author:'faizstep dev1',img : '/src/assets/2.png',isfav : false},
@@ -78,13 +82,28 @@ export default {
         this.$refs.name.classList.toggle('active');
         this.$refs.name.focus();
         console.log(this.$refs.name);
+      },
+      testDPI() {
+        this.axios.post('http://tools.kunlokka.com:203/test_post.php',
+        {
+          "username" : "qwer",
+          "password" : "asdf"
+        }
+        )
+        .then(response => (
+          this.info = response.data,
+          console.log(response.data)
+        ))
+        .catch(error => console.log(error))
       }
     },
     computed : {
       filter() {
         return this.book.filter((book) => book.isfav )
-      }
+      },
+
     }
+    
 }
 </script>
 

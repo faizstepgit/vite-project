@@ -9,7 +9,7 @@
 export default {
   setup() {
       onBeforeMount(() => {
-        // alert('ssssssssssssssssss');
+        alert('ssssssssssssssssss');
         
       })
     },
