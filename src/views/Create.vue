@@ -29,11 +29,20 @@
     </li>
   </ul>
 </div>
+<div>
+  <ul>
+    <li v-for="user in users" >
+      <h1>{{ user }}</h1>
+    </li>
+  </ul>
+</div>
 <a href="https://www.facebook.com/Faizstep/" target="_blank">ssss</a>
 <a v-bind:href="url" target="_blank">aaaa</a>
 
 <input type="text" ref="name">
 <button @click="clicklist">click me</button>
+<button @click="chk_axios">chk_axios</button>
+<!-- <button @click="chk_axios2">chk_axios</button>  -->
 </template>
 
 <script>
@@ -45,6 +54,11 @@ export default {
       ddd : [1,2,3,4],
       x :0,
       y :0,
+      data : JSON.stringify({
+        "username": "qwer",
+          "password": "asdf"
+      }),
+      users : [],
       showbook : true,
       book : [
         { title :'name of myword',author:'faizstep dev',img : '/src/assets/1.png',isfav : true},
@@ -78,16 +92,36 @@ export default {
         this.$refs.name.classList.toggle('active');
         this.$refs.name.focus();
         console.log(this.$refs.name);
-      }
+      },
+      chk_axios() {
+        console.log();
+        // console.log('ddd');
+      },
+      getUsers() {
+      this.axios.post('http://tools.kunlokka.com:203/test_post.php',{
+        "username": "qwer",
+        "password": "asdf"
+      })
+        .then(response => {
+          this.users = response.data.status;
+          console.log(response.data)
+        })
+        .catch(error => {
+          console.log(error);
+        });
+      },
     },
     computed : {
       filter() {
         return this.book.filter((book) => book.isfav )
       }
+    },
+    mounted() {
+      this.getUsers();
     }
+
 }
 </script>
-
 
 <style>
 
