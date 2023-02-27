@@ -1,5 +1,4 @@
 import { createRouter, createWebHistory } from 'vue-router';
-
 import Home from '../views/Home.vue';
 import Login from '../views/Authentication/Login.vue';
 import Update from '../views/Update.vue';
@@ -43,7 +42,6 @@ const routes = [
 const router = createRouter({
   history : createWebHistory(),
   routes
-  // routes : 
 });
 
 export default router

@@ -23,10 +23,10 @@
 
 <div>
   <ul>
-    <li v-for="books in filter" :class="{ fav: books.isfav}" @click="favtoggle(books)">
+    <!-- <li v-for="books in filter" :class="{ fav: books.isfav}" @click="favtoggle(books)">
       <img :src="books.img" :alt="books.title">
       <h3>{{books.title}} - {{ books.author }}</h3>
-    </li>
+    </li> -->
   </ul>
 </div>
 <div>
@@ -38,7 +38,6 @@
 </div>
 <a href="https://www.facebook.com/Faizstep/" target="_blank">ssss</a>
 <a v-bind:href="url" target="_blank">aaaa</a>
-
 <input type="text" ref="name">
 <button @click="clicklist">click me</button>
 <button @click="chk_axios">chk_axios</button>
@@ -60,6 +59,7 @@ export default {
       }),
       users : [],
       showbook : true,
+      info : {},
       book : [
         { title :'name of myword',author:'faizstep dev',img : '/src/assets/1.png',isfav : true},
         { title :'name of myword1',author:'faizstep dev1',img : '/src/assets/2.png',isfav : false},

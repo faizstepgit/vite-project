@@ -13,7 +13,6 @@
 </template>
 <script>
   import { onBeforeMount, onMounted } from 'vue'
-  // require('../node_modules/admin-lte/dist/css/adminlte.min.css');
   import "../node_modules/admin-lte/dist/css/adminlte.min.css";
   import "../node_modules/jquery/dist/jquery.min.js";
   import "../node_modules/admin-lte/plugins/bootstrap/js/bootstrap.bundle.min.js";
